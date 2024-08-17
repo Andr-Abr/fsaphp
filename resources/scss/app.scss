@@ -1,0 +1,16 @@
+// resources/scss/app.scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+// sobrescribir colores
+$primary:       #007bff !default; // Azul
+$secondary:     #000000 !default; // Negro
+$success:       #008080 !default; // Verde azulado
+$info:          #ffff00 !default; // Amarillo
+$warning:       #ff4500 !default; // Naranja
+$danger:        #f0071f !default; // Rojo
+$light:         #f8f9fa !default; // Blanco
+$dark:          #343a40 !default; // Gris
+
+@import "bootstrap/scss/bootstrap";

@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
+use App\Http\Middleware\AuthenticateCuenta;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Paginator::useBootstrap();
+        $this->app['router']->aliasMiddleware('auth.cuenta', AuthenticateCuenta::class);
     }
 }
